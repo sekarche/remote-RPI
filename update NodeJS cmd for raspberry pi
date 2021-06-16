@@ -1,6 +1,21 @@
+//Upgrading to more recent versions of Node.js on the Raspberry Pi
+
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
- sudo apt install nodejs
+sudo apt install nodejs
  
- nodejs -v
+nodejs -v
+ 
+ 
+ //Installing and Upgrading Node-RED
+ 
+ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+ 
+ //Autostart on boot
+ 
+ sudo systemctl enable nodered.service
+ 
+ sudo systemctl disable nodered.service
+ 
+ 
  
